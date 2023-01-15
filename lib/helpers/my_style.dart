@@ -20,6 +20,22 @@ class MyStyle {
         decoration: TextDecoration.none),
   );
 
+  static TextStyle bigText = GoogleFonts.poppins(
+    textStyle: TextStyle(
+        color: MyColor.secTextColor,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+        decoration: TextDecoration.none),
+  );
+
+  static TextStyle textFormStyle = GoogleFonts.poppins(
+    textStyle: TextStyle(
+        color: MyColor.formColor,
+        fontSize: 12,
+        fontWeight: FontWeight.w300,
+        decoration: TextDecoration.none),
+  );
+
   static TextStyle smallText = GoogleFonts.poppins(
     textStyle: TextStyle(
         color: MyColor.secTextColor,

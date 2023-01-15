@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Timer(
-      Duration(seconds: 3),
+      Duration(seconds: 2),
       () => {Navigator.pushNamed(context, '/login')},
     );
   }
@@ -29,10 +29,11 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: MyColor.primaryColor,
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [MyColor.primaryColor, Color.fromARGB(255, 41, 1, 1)],
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft),
+          gradient: LinearGradient(colors: [
+            MyColor.primaryColor,
+            Color.fromARGB(255, 136, 22, 14),
+            Color.fromARGB(255, 41, 1, 1),
+          ], begin: Alignment.topRight, end: Alignment.bottomLeft),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

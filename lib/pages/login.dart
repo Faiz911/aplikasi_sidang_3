@@ -73,9 +73,10 @@ class LoginPage extends StatelessWidget {
                             ),
                           )),
                     ),
-                    SizedBox(),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, "/loginMahasiswa");
+                      },
                       child: Container(
                           width: double.infinity,
                           height: 48,

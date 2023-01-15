@@ -1,5 +1,7 @@
 import 'package:app_sidang_2/helpers/my_colors.dart';
+import 'package:app_sidang_2/pages/homepagemahasiswa.dart';
 import 'package:app_sidang_2/pages/login.dart';
+import 'package:app_sidang_2/pages/loginMahasiswa.dart';
 import 'package:app_sidang_2/pages/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,6 +19,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '': (context) => SplashScreen(),
         '/login': (context) => LoginPage(),
+        '/loginMahasiswa': (context) => LoginMahasiswaPage(),
+        '/homePageMahasiswa': (context) => HomePageMahasiswa(),
+
         // '/main_home': (context) => MainHome(),
         // '/signUp': (context) => SignUpPage(),
         // '/profile': (context) => ProfilePage(),
