@@ -27,38 +27,48 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: MyColor.primaryColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Image.asset(
-              "assets/i_telkom.png",
-              width: 179,
-              height: 179,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [MyColor.primaryColor, Color.fromARGB(255, 41, 1, 1)],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: Image.asset(
+                "assets/i_telkom.png",
+                width: 179,
+                height: 179,
+              ),
             ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            "Aplikasi Pengelolaan Pendaftaran Sidang",
-            style: TextStyle(
-              fontSize: 16,
-              color: MyColor.secTextColor,
-              fontWeight: FontWeight.bold,
+            SizedBox(
+              height: 5,
             ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            "Proyek Akhir",
-            style: TextStyle(
-                fontSize: 12,
+            Text(
+              "Aplikasi Pengelolaan Data Sidang dan Proyek Akhir",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
                 color: MyColor.secTextColor,
-                fontWeight: FontWeight.bold),
-          )
-        ],
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              "Proyek Akhir",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 12,
+                  color: MyColor.secTextColor,
+                  fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
       ),
     );
   }
