@@ -1,5 +1,5 @@
 import 'package:app_sidang_2/helpers/my_colors.dart';
-import 'package:app_sidang_2/pages/homepagemahasiswa.dart';
+import 'package:app_sidang_2/pages/home/homepagemahasiswa.dart';
 import 'package:app_sidang_2/pages/login.dart';
 import 'package:app_sidang_2/pages/loginMahasiswa.dart';
 import 'package:app_sidang_2/pages/splashscreen.dart';
