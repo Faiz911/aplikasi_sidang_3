@@ -1,12 +1,18 @@
 import 'package:app_sidang_2/helpers/my_colors.dart';
 import 'package:app_sidang_2/helpers/my_style.dart';
+import 'package:app_sidang_2/pages/home/daftarSidang.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/buttonMenu.dart';
 
-class HomePageMahasiswa extends StatelessWidget {
+class HomePageMahasiswa extends StatefulWidget {
   const HomePageMahasiswa({Key? key}) : super(key: key);
 
+  @override
+  State<HomePageMahasiswa> createState() => _HomePageMahasiswaState();
+}
+
+class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,14 +36,14 @@ class HomePageMahasiswa extends StatelessWidget {
                   ]),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 50, vertical: 30),
+              padding: EdgeInsets.symmetric(horizontal: 50, vertical: 40),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
                       CircleAvatar(
-                        backgroundImage: AssetImage("assets/i_telkom.png"),
+                        backgroundImage: AssetImage("assets/avatar_image.jpg"),
                         radius: 35,
                       ),
                       SizedBox(
@@ -164,17 +170,26 @@ class HomePageMahasiswa extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ButtonMenu(
-                      title: "Bimbingan",
-                      icon: "assets/i_bimbingan.png",
+                    GestureDetector(
+                      onTap: () {},
+                      child: ButtonMenu(
+                        title: "Bimbingan",
+                        icon: "assets/i_bimbingan.png",
+                      ),
                     ),
-                    ButtonMenu(
-                      title: "Daftar Sidang",
-                      icon: "assets/i_daftarSidang.png",
+                    GestureDetector(
+                      onTap: () {},
+                      child: ButtonMenu(
+                        title: "Daftar Sidang",
+                        icon: "assets/i_daftarSidang.png",
+                      ),
                     ),
-                    ButtonMenu(
-                      title: "Timeline",
-                      icon: "assets/i_timeline.png",
+                    GestureDetector(
+                      onTap: () {},
+                      child: ButtonMenu(
+                        title: "Timeline",
+                        icon: "assets/i_timeline.png",
+                      ),
                     ),
                   ],
                 ),
@@ -184,17 +199,41 @@ class HomePageMahasiswa extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ButtonMenu(
-                      title: "Nilai",
-                      icon: "assets/i_nilai.png",
+                    GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.vertical(
+                                    top: Radius.circular(20))),
+                            builder: (context) => DraggableScrollableSheet(
+                                  initialChildSize: 0.65,
+                                  expand: false,
+                                  builder: (context, ScrollController) =>
+                                      const SingleChildScrollView(
+                                    child: Text("data"),
+                                  ),
+                                ));
+                      },
+                      child: ButtonMenu(
+                        title: "Nilai",
+                        icon: "assets/i_nilai.png",
+                      ),
                     ),
-                    ButtonMenu(
-                      title: "Jadwal Sidang",
-                      icon: "assets/i_jadwalSidang.png",
+                    GestureDetector(
+                      onTap: () {},
+                      child: ButtonMenu(
+                        title: "Jadwal Sidang",
+                        icon: "assets/i_jadwalSidang.png",
+                      ),
                     ),
-                    ButtonMenu(
-                      title: "Pengumuman",
-                      icon: "assets/i_pengumuman.png",
+                    GestureDetector(
+                      onTap: () {},
+                      child: ButtonMenu(
+                        title: "Pengumuman",
+                        icon: "assets/i_pengumuman.png",
+                      ),
                     ),
                   ],
                 ),
@@ -230,7 +269,50 @@ class HomePageMahasiswa extends StatelessWidget {
                 style: MyStyle.bigText.copyWith(color: MyColor.textPrimary),
               ),
             ],
-          )
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container(
+                  height: 90,
+                  width: 160,
+                  margin: EdgeInsets.only(right: 15),
+                  decoration: BoxDecoration(
+                      color: MyColor.formColor,
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Center(child: Text("berita")),
+                ),
+                Container(
+                  height: 90,
+                  width: 160,
+                  margin: EdgeInsets.only(right: 15),
+                  decoration: BoxDecoration(
+                      color: MyColor.formColor,
+                      borderRadius: BorderRadius.circular(15)),
+                ),
+                Container(
+                  height: 90,
+                  width: 160,
+                  margin: EdgeInsets.only(right: 15),
+                  decoration: BoxDecoration(
+                      color: MyColor.formColor,
+                      borderRadius: BorderRadius.circular(15)),
+                ),
+                Container(
+                  height: 90,
+                  width: 160,
+                  margin: EdgeInsets.only(right: 15),
+                  decoration: BoxDecoration(
+                      color: MyColor.formColor,
+                      borderRadius: BorderRadius.circular(15)),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
