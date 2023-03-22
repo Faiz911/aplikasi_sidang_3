@@ -1,6 +1,11 @@
+import 'dart:ui';
+
 import 'package:app_sidang_2/helpers/my_colors.dart';
 import 'package:app_sidang_2/helpers/my_style.dart';
 import 'package:app_sidang_2/pages/home/daftarSidang.dart';
+import 'package:app_sidang_2/pages/home/pengumuman.dart';
+import 'package:app_sidang_2/widgets/BottomSheetContent.dart';
+import 'package:app_sidang_2/widgets/UbahBerkas.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/buttonMenu.dart';
@@ -11,6 +16,8 @@ class HomePageMahasiswa extends StatefulWidget {
   @override
   State<HomePageMahasiswa> createState() => _HomePageMahasiswaState();
 }
+
+void opensheet() async {}
 
 class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
   @override
@@ -178,7 +185,22 @@ class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(20)),
+                            ),
+                            builder: (_) => BackdropFilter(
+                                  filter:
+                                      ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                                  child: BottomSheetContent(
+                                    submenu: UbahBerkas(),
+                                  ),
+                                ));
+                      },
                       child: ButtonMenu(
                         title: "Daftar Sidang",
                         icon: "assets/i_daftarSidang.png",
@@ -205,15 +227,13 @@ class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
                             context: context,
                             isScrollControlled: true,
                             shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.vertical(
-                                    top: Radius.circular(20))),
-                            builder: (context) => DraggableScrollableSheet(
-                                  initialChildSize: 0.65,
-                                  expand: false,
-                                  builder: (context, ScrollController) =>
-                                      const SingleChildScrollView(
-                                    child: Text("data"),
-                                  ),
+                              borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(20)),
+                            ),
+                            builder: (_) => BackdropFilter(
+                                  filter:
+                                      ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                                  // child: BottomSheetDaftarSidang(),
                                 ));
                       },
                       child: ButtonMenu(
@@ -229,7 +249,22 @@ class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(20)),
+                            ),
+                            builder: (_) => BackdropFilter(
+                                  filter:
+                                      ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                                  child: BottomSheetContent(
+                                    submenu: PengumumanPage(),
+                                  ),
+                                ));
+                      },
                       child: ButtonMenu(
                         title: "Pengumuman",
                         icon: "assets/i_pengumuman.png",

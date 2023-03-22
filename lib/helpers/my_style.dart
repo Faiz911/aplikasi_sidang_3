@@ -20,6 +20,14 @@ class MyStyle {
         decoration: TextDecoration.none),
   );
 
+  static TextStyle thirdTitleText = GoogleFonts.poppins(
+    textStyle: TextStyle(
+        color: MyColor.secTextColor,
+        fontSize: 18,
+        fontWeight: FontWeight.w500,
+        decoration: TextDecoration.none),
+  );
+
   static TextStyle bigText = GoogleFonts.poppins(
     textStyle: TextStyle(
         color: MyColor.secTextColor,
