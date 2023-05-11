@@ -3,7 +3,7 @@ import 'package:app_sidang_2/pages/home/homepagemahasiswa.dart';
 import 'package:app_sidang_2/pages/login.dart';
 import 'package:app_sidang_2/pages/loginMahasiswa.dart';
 import 'package:app_sidang_2/pages/splashscreen.dart';
-import 'package:app_sidang_2/widgets/UbahBerkas.dart';
+import 'package:app_sidang_2/pages/home/UbahBerkas.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

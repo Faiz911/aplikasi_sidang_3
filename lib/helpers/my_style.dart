@@ -67,4 +67,13 @@ class MyStyle {
         fontWeight: FontWeight.w300,
         decoration: TextDecoration.none),
   );
+
+  static LinearGradient primaryColorStyle = LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+      MyColor.primaryColor,
+      Color.fromARGB(255, 88, 6, 6),
+    ],
+  );
 }

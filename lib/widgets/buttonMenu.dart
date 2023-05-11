@@ -24,13 +24,7 @@ class ButtonMenu extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: MyColor.primaryColor,
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    MyColor.primaryColor,
-                    Color.fromARGB(255, 88, 6, 6)
-                  ]),
+              gradient: MyStyle.primaryColorStyle,
             ),
             child: Padding(
               padding: const EdgeInsets.all(10),

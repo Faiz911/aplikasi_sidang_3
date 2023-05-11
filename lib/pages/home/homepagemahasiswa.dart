@@ -3,9 +3,10 @@ import 'dart:ui';
 import 'package:app_sidang_2/helpers/my_colors.dart';
 import 'package:app_sidang_2/helpers/my_style.dart';
 import 'package:app_sidang_2/pages/home/daftarSidang.dart';
+import 'package:app_sidang_2/pages/home/nilaimahasiswa.dart';
 import 'package:app_sidang_2/pages/home/pengumuman.dart';
 import 'package:app_sidang_2/widgets/BottomSheetContent.dart';
-import 'package:app_sidang_2/widgets/UbahBerkas.dart';
+import 'package:app_sidang_2/pages/home/UbahBerkas.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/buttonMenu.dart';
@@ -34,13 +35,7 @@ class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(40),
                   bottomRight: Radius.circular(40)),
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    MyColor.primaryColor,
-                    Color.fromARGB(255, 88, 6, 6)
-                  ]),
+              gradient: MyStyle.primaryColorStyle,
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 50, vertical: 40),
@@ -197,7 +192,7 @@ class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
                                   filter:
                                       ImageFilter.blur(sigmaX: 5, sigmaY: 5),
                                   child: BottomSheetContent(
-                                    submenu: UbahBerkas(),
+                                    submenu: DaftarSidangPage(),
                                   ),
                                 ));
                       },
@@ -233,7 +228,9 @@ class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
                             builder: (_) => BackdropFilter(
                                   filter:
                                       ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                                  // child: BottomSheetDaftarSidang(),
+                                  child: BottomSheetContent(
+                                    submenu: NilaiMahasiswa(),
+                                  ),
                                 ));
                       },
                       child: ButtonMenu(

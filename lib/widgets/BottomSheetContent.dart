@@ -2,7 +2,7 @@ import 'package:app_sidang_2/helpers/my_colors.dart';
 import 'package:app_sidang_2/helpers/my_style.dart';
 import 'package:flutter/material.dart';
 
-import 'UbahBerkas.dart';
+import '../pages/home/UbahBerkas.dart';
 
 class BottomSheetContent extends StatefulWidget {
   const BottomSheetContent({Key? key, required this.submenu}) : super(key: key);

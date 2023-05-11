@@ -1,6 +1,6 @@
 import 'package:app_sidang_2/helpers/my_colors.dart';
 import 'package:app_sidang_2/helpers/my_style.dart';
-import 'package:app_sidang_2/widgets/UbahBerkas.dart';
+import 'package:app_sidang_2/pages/home/UbahBerkas.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
