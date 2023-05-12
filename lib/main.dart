@@ -1,5 +1,8 @@
 import 'package:app_sidang_2/helpers/my_colors.dart';
 import 'package:app_sidang_2/pages/home/homepagemahasiswa.dart';
+import 'package:app_sidang_2/pages/home/nilaiPra-sidang.dart';
+import 'package:app_sidang_2/pages/home/nilaiProposal.dart';
+import 'package:app_sidang_2/pages/home/nilaiSidang.dart';
 import 'package:app_sidang_2/pages/login.dart';
 import 'package:app_sidang_2/pages/loginMahasiswa.dart';
 import 'package:app_sidang_2/pages/splashscreen.dart';
@@ -23,6 +26,9 @@ class MyApp extends StatelessWidget {
         '/loginMahasiswa': (context) => LoginMahasiswaPage(),
         '/homePageMahasiswa': (context) => HomePageMahasiswa(),
         '/ubahBerkas': (context) => UbahBerkas(),
+        '/nilaiProposal': (context) => NilaiProposal(),
+        '/nilaiPra': (context) => NilaiPra(),
+        '/nilaiSidang': (context) => NilaiSidang(),
 
         // '/main_home': (context) => MainHome(),
         // '/signUp': (context) => SignUpPage(),

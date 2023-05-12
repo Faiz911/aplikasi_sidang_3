@@ -57,31 +57,46 @@ class NilaiMahasiswa extends StatelessWidget {
                 SizedBox(
                   height: 15,
                 ),
-                ButtonNilai(
-                  title: "Nilai Proposal",
-                  logo: Icon(
-                    Icons.file_copy,
-                    color: MyColor.secTextColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/nilaiProposal");
+                  },
+                  child: ButtonNilai(
+                    title: "Nilai Proposal",
+                    logo: Icon(
+                      Icons.file_copy,
+                      color: MyColor.secTextColor,
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 25,
                 ),
-                ButtonNilai(
-                  title: "Nilai Pra-Sidang",
-                  logo: Icon(
-                    Icons.book,
-                    color: MyColor.secTextColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/nilaiPra");
+                  },
+                  child: ButtonNilai(
+                    title: "Nilai Pra-Sidang",
+                    logo: Icon(
+                      Icons.book,
+                      color: MyColor.secTextColor,
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 25,
                 ),
-                ButtonNilai(
-                  title: "Nilai Sidang",
-                  logo: Icon(
-                    Icons.maps_home_work,
-                    color: MyColor.secTextColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/nilaiSidang");
+                  },
+                  child: ButtonNilai(
+                    title: "Nilai Sidang",
+                    logo: Icon(
+                      Icons.maps_home_work,
+                      color: MyColor.secTextColor,
+                    ),
                   ),
                 ),
                 SizedBox(
