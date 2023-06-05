@@ -6,9 +6,9 @@ import 'package:app_sidang_2/pages/home/daftarSidang.dart';
 import 'package:app_sidang_2/pages/home/nilaimahasiswa.dart';
 import 'package:app_sidang_2/pages/home/pengumuman.dart';
 import 'package:app_sidang_2/widgets/BottomSheetContent.dart';
-import 'package:app_sidang_2/pages/home/UbahBerkas.dart';
 import 'package:flutter/material.dart';
 
+import '../../widgets/Berita.dart';
 import '../../widgets/buttonMenu.dart';
 
 class HomePageMahasiswa extends StatefulWidget {
@@ -309,38 +309,20 @@ class _HomePageMahasiswaState extends State<HomePageMahasiswa> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                Container(
-                  height: 90,
-                  width: 160,
-                  margin: EdgeInsets.only(right: 15),
-                  decoration: BoxDecoration(
-                      color: MyColor.formColor,
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Center(child: Text("berita")),
+                Berita(
+                  gambar: "assets/berita.png",
                 ),
-                Container(
-                  height: 90,
-                  width: 160,
-                  margin: EdgeInsets.only(right: 15),
-                  decoration: BoxDecoration(
-                      color: MyColor.formColor,
-                      borderRadius: BorderRadius.circular(15)),
+                Berita(
+                  gambar: "assets/berita.png",
                 ),
-                Container(
-                  height: 90,
-                  width: 160,
-                  margin: EdgeInsets.only(right: 15),
-                  decoration: BoxDecoration(
-                      color: MyColor.formColor,
-                      borderRadius: BorderRadius.circular(15)),
+                Berita(
+                  gambar: "assets/berita.png",
                 ),
-                Container(
-                  height: 90,
-                  width: 160,
-                  margin: EdgeInsets.only(right: 15),
-                  decoration: BoxDecoration(
-                      color: MyColor.formColor,
-                      borderRadius: BorderRadius.circular(15)),
+                Berita(
+                  gambar: "assets/berita.png",
+                ),
+                Berita(
+                  gambar: "assets/berita.png",
                 ),
               ],
             ),
